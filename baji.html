@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy New Year 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+/* SOFT BACKGROUND */
+body{
+  height:100vh;
+  background: linear-gradient(180deg, #f6f7f8, #e9eef3);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#222;
+}
+
+/* OPEN BUTTON SCREEN */
+.open-screen{
+  text-align:center;
+}
+.open-btn{
+  padding:14px 28px;
+  font-size:16px;
+  border:none;
+  border-radius:30px;
+  background:#2f80ed;
+  color:#fff;
+  cursor:pointer;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+.open-btn:active{
+  transform:scale(0.97);
+}
+
+/* CARD */
+.card{
+  display:none;
+  background:#ffffff;
+  border-radius:22px;
+  padding:30px 22px;
+  width:92%;
+  max-width:360px;
+  text-align:center;
+  box-shadow:0 12px 30px rgba(0,0,0,0.12);
+  animation:fadeIn 0.8s ease;
+}
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* PHOTO */
+.card img{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #2f80ed;
+  margin-bottom:15px;
+}
+
+/* TITLE */
+h1{
+  font-size:24px;
+  margin-bottom:14px;
+  color:#2f80ed;
+}
+
+/* MESSAGE */
+.message{
+  font-size:15px;
+  line-height:1.7;
+  color:#444;
+}
+
+/* FOOTER */
+.footer{
+  margin-top:18px;
+  font-size:14px;
+  color:#666;
+}
+.footer span{
+  font-weight:600;
+  color:#2f80ed;
+}
+</style>
+</head>
+
+<body>
+
+<!-- CLICK TO OPEN -->
+<div class="open-screen" id="openScreen">
+  <button class="open-btn" onclick="openCard()">🎉 Tap to Open</button>
+</div>
+
+<!-- GREETING CARD -->
+<div class="card" id="card">
+  <img src="myphoto.jpeg" alt="My Photo">
+  <h1>Happy New Year 2026</h1>
+
+  <div class="message">
+    “Wishing you a Happy New Year 2026!<br>
+    May this year bring happiness, success,<br>
+    and peace into your life 🤍✨”
+  </div>
+
+  <div class="footer">
+    — With best wishes,<br>
+    <span>SHAIK BAJI SAHEB</span>
+  </div>
+</div>
+
+<script>
+function openCard(){
+  document.getElementById("openScreen").style.display="none";
+  document.getElementById("card").style.display="block";
+}
+</script>
+
+</body>
+</html>
